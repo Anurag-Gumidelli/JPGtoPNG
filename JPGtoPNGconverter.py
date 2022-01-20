@@ -6,10 +6,6 @@ import sys
 src_folder = sys.argv[1]
 result_folder = sys.argv[2]
 
-# if os.path.exists(src_folder):
-# 	print(src_folder)
-# 	print('Given source folder does not exist!')
-# 	raise Exception('Source folder does not exist!!')
 
 if not os.path.exists(result_folder):
 	os.mkdir(result_folder)
