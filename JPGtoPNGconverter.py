@@ -17,11 +17,8 @@ print(contents)
 
 for image in contents:
 	im = Image.open(os.path.join(src_folder, image))
-	print(im)
-	loc = image.replace('.jpeg', '.png')
-	print(loc)
-	o_file = os.path.join(result_folder,''.join(loc))
-	print(o_file)
-	im.save(o_file)
+	clean_name = os.path.splitext(image)[0]
+	o_file = os.path.join(result_folder,f'{clean_name}.png')
+	im.save(o_file, 'png')
 
 print('done!')
